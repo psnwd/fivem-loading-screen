@@ -15,18 +15,18 @@ A customizable loading screen for FiveM servers. Personalize the player’s wait
 1. Clone or download the repository:
 
    ```bash
-   git clone https://github.com/yourusername/fivem-loading-screen.git
+   git clone https://github.com/psnwd/fivem-loading-screen.git
    ```
 
 2. Move the downloaded folder into your `resources` folder in the FiveM server directory.
 
-3. Customize the `index.html`, `style.css`, and `config.js` to your liking.
+3. Customize the `index.html`, `style.css`, and `script.js` to your liking.
 
 ## Customization
 
 - Edit the `index.html` to change the structure and content of the loading screen.
 - Use `style.css` to modify the visual appearance (colors, fonts, etc.).
-- Adjust `config.js` to set music, loading progress, and other features.
+- Adjust `script.js` to set music, loading progress, and other features.
 
 ## Contributing
 
