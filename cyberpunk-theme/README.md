@@ -26,6 +26,7 @@ Replace `qb-loading` folder files (QBCore) with this files. Other framework not 
   |  ├─ assets
   |  |   |─ images
   |  |   |   └─ background.jpg
+  |  |   |   └─ default-image.jpeg (Player Default Image)
   |  |   |   └─ logo.png
   |  |   |   └─ music_1.jpeg
   |  |   |   └─ music_2.jpeg

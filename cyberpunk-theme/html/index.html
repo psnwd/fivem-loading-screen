@@ -13,15 +13,6 @@
       href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css"
     />
     <link href="styles.css" rel="stylesheet" />
-    <style>
-      .filled-box {
-        background-color: #00ff95; /* Green color for filled boxes */
-      }
-
-      .empty-box {
-        background-color: #2a2a2a30; /* Dark gray for empty boxes */
-      }
-    </style>
   </head>
   <body
     class="relative bg-gray-900 flex items-center justify-center h-screen overflow-hidden select-none"
@@ -43,50 +34,49 @@
 
     <!-- Loading Screen Content -->
 
-    <div class="relative h-full w-full">
-      <!-- Server Logo -->
-      <div class="absolute left-5 top-5">
-        <img
-          src="assets/images/logo.png"
-          alt="Server Logo"
-          class="w-32 h-32 md:w-48 md:h-48"
-        />
-      </div>
+    <!-- Server Logo -->
+    <div class="absolute left-5 top-5">
+      <img
+        src="assets/images/logo.png"
+        alt="Server Logo"
+        class="w-32 h-32 md:w-48 md:h-48"
+      />
+    </div>
 
+    <div class="relative h-full w-screen flex justify-between mx-4 mb-48">
       <!-- Admin Details Cards -->
       <div
-        class="flex flex-col space-y-4 md:space-y-6 w-full md:w-auto md:order-1 absolute right-5 bottom-24"
+        class="flex-col flex-wrap justify-end space-y-4 md:space-y-6 w-full md:w-auto md:order-1 hidden md:flex"
         id="admin-container"
       ></div>
 
       <!-- Social Media Links -->
-      <div
-        class="flex absolute bottom-24 flex-col justify-start items-start ml-4"
-      >
-        <div class="flex flex-row items-center z-10 mb-2 gap-4">
+      <div class="flex flex-col flex-wrap justify-end items-start md:max-w-60">
+        <div class="flex-row items-center z-10 mb-2 gap-4 hidden md:flex">
           <div class="flex space-x-1" id="progress-container"></div>
           <div
-            class="text-green-400 mt-2 text-2xl font-semibold"
+            class="text-green-400 mt-2 text-2xl font-semibold hidden"
             id="percentage"
           >
             0%
           </div>
         </div>
 
-        <div id="social-container"></div>
+        <div id="social-container" class="flex flex-wrap gap-1"></div>
       </div>
     </div>
 
     <!-- Music Player -->
     <div
-      class="gradient-button w-full flex items-center p-4 shadow-lg rounded-lg absolute bottom-0"
+      class="gradient-button w-full flex items-center p-4 shadow-lg rounded-lg absolute bottom-0 justify-center sm:justify-between"
     >
       <img
         id="albumArt"
-        src="default-image.jpg"
-        class="rounded-full w-16 h-16 object-cover mr-4 shadow-2xl drop-shadow-md"
+        src="default-image.jpeg"
+        class="rounded-full w-16 h-16 object-cover mr-4 shadow-2xl drop-shadow-md hidden sm:block"
+        style="animation: spin 10s linear infinite"
       />
-      <div class="flex-grow">
+      <div class="flex-grow hidden sm:block">
         <p id="songTitle" class="text-lg font-semibold">
           Song Title<br /><span id="songArtist" class="text-sm font-normal"
             >Artist Name</span
@@ -184,5 +174,9 @@
     </div>
 
     <script src="script.js"></script>
+    <link
+      href="https://cdn.jsdelivr.net/npm/tailwindcss@3.0.0/dist/tailwind.min.css"
+      rel="stylesheet"
+    />
   </body>
 </html>

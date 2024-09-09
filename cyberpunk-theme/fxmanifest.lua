@@ -3,7 +3,7 @@ game 'gta5'
 lua54 'yes'
 
 author 'BlackCAT' -- Discord: cwblackcat
-description 'Loading screen'
+description 'Loading Screen (cyberpunk-theme)'
 version '1.0.0'
 
 files {

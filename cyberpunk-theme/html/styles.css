@@ -463,3 +463,37 @@ body {
 #volumeSlider:active::-webkit-slider-thumb {
   background: var(--yellow-color); /* Change thumb color on active */
 }
+
+/* Progress Bar CSS */
+.filled-box {
+  background-color: #00ff95; /* Green color for filled boxes */
+}
+
+.empty-box {
+  background-color: #2a2a2a30; /* Dark gray for empty boxes */
+}
+
+/* Animation CSS */
+
+@keyframes spin {
+  0% {
+    transform: rotate(0deg);
+  }
+  100% {
+    transform: rotate(360deg);
+  }
+}
+
+.blink {
+  animation: blink-animation 1s step-start infinite;
+}
+
+@keyframes blink-animation {
+  0%,
+  100% {
+    background-color: transparent; /* Or a color to represent "empty" */
+  }
+  50% {
+    background-color: #00ff95; /* Or a color to represent "filled" */
+  }
+}
