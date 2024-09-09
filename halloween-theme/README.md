@@ -1,6 +1,6 @@
 ## FiveM Loading Screen
 
-#### Cyberpunk Version
+#### Halloween Version
 
 > **Warning**
 > This project is still in development.
@@ -19,7 +19,7 @@ Replace `qb-loading` folder files (QBCore) with this files. Other framework not 
 ### Structure
 
 ```text
-  cyberpunk-theme
+  halloween-theme
   |─ client
   |  ├─ client.lua
   |─ html
