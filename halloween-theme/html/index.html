@@ -1,0 +1,149 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Halloween Theme</title>
+    <link href="styles.css" rel="stylesheet" />
+    <link
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css"
+      rel="stylesheet"
+    />
+  </head>
+  <body
+    class="halloween-family text-white relative h-screen overflow-hidden select-none bg-black shadow-2xl drop-shadow-2xl"
+  >
+    <video
+      autoplay
+      muted
+      loop
+      class="absolute inset-0 w-full h-full object-cover -z-10 transform scale-150 transform-gpu"
+    >
+      <source src="assets/videos/background.webm" type="video/webm" />
+      <img
+        src="assets/images/background.jpg"
+        alt="Background Image"
+        class="w-full h-full object-cover"
+      />
+    </video>
+
+    <!-- Spider Web Image In top left corner -->
+    <img
+      src="assets/images/spider-web-2.png"
+      alt="Spider Web"
+      class="absolute top-0 left-0 w-60 h-40"
+    />
+    <div class="spider absolute top-10 left-10"></div>
+    <div class="spider-creep absolute top-20 left-20"></div>
+    <div class="spider-swing absolute top-5 left-32"></div>
+
+    <div class="group z-20 absolute bottom-32 right-5 flex items-center gap-2">
+      <div
+        class="text-white text-3xl md:text-4xl uppercase opacity-0 transform translate-x-6 group-hover:translate-x-0 group-hover:opacity-100 transition-all duration-300"
+      >
+        Hansamali RolePlay
+      </div>
+      <img
+        src="assets/images/logo.png"
+        alt="Server Logo"
+        class="w-20 h-20 animate-pulse group-hover-trigger"
+      />
+    </div>
+
+    <div class="flex justify-between">
+      <div id="admin-container" class="flex gap-2 hidden"></div>
+
+      <div></div>
+    </div>
+
+    <div
+      class="halloween-div w-full flex items-center p-4 shadow-lg rounded-t-lg absolute bottom-0 justify-center sm:justify-between"
+    >
+      <!-- Spider Web Background -->
+      <div class="spider-web"></div>
+
+      <!-- Spider -->
+      <div class="spider"></div>
+
+      <div class="halloween-frame mr-4 hidden sm:block">
+        <img
+          id="albumArt"
+          src="assets/images/default-image.jpeg"
+          class="halloween-image shadow-2xl drop-shadow-md animate-spin-slow"
+          alt="Album Art"
+        />
+      </div>
+
+      <div class="flex-1">
+        <p id="songTitle" class="text-lg font-semibold">
+          Song Title<br /><span id="songArtist" class="text-sm font-normal"
+            >Artist Name</span
+          >
+        </p>
+      </div>
+
+      <audio id="musicPlayer" preload="auto" class="hidden">
+        <source id="audioSource" src="assets/music/1.mp3" type="audio/mpeg" />
+        <source id="audioSource2" src="assets/music/2.mp3" type="audio/mpeg" />
+        <source id="audioSource3" src="assets/music/3.mp3" type="audio/mpeg" />
+        Your browser does not support the audio element.
+      </audio>
+
+      <div class="flex flex-row items-center space-x-2 mr-4 z-20">
+        <input
+          type="range"
+          min="0"
+          max="100"
+          value="50"
+          id="volumeSlider"
+          class="max-w-[80px] mr-2"
+        />
+
+        <button
+          id="prev"
+          class="btn shadow-2xl drop-shadow-md bg-halloween-orange rounded-lg"
+          style="height: 40px; width: 40px"
+        >
+          <span class="btn__content">
+            <i class="fa-solid fa-caret-left text-3xl"></i>
+          </span>
+          <span class="btn__glitch"></span>
+        </button>
+
+        <button
+          id="playPause"
+          class="btn shadow-2xl drop-shadow-md bg-halloween-orange rounded-lg"
+          style="height: 40px; width: 40px"
+        >
+          <span class="btn__content">
+            <i class="fa-solid fa-play text-xl" id="playIcon"></i>
+            <i class="fa-solid fa-pause text-xl hidden" id="pauseIcon"></i>
+          </span>
+          <span class="btn__glitch"></span>
+        </button>
+
+        <button
+          id="next"
+          class="btn shadow-2xl drop-shadow-md bg-halloween-orange rounded-lg"
+          style="height: 40px; width: 40px"
+        >
+          <span class="btn__content">
+            <i class="fa-solid fa-caret-right text-3xl"></i>
+          </span>
+          <span class="btn__glitch"></span>
+        </button>
+      </div>
+    </div>
+
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script src="script.js"></script>
+    <script src="tailwindcss.js"></script>
+    <style type="text/tailwindcss">
+      @layer utilities {
+        .content-auto {
+          content-visibility: auto;
+        }
+      }
+    </style>
+  </body>
+</html>

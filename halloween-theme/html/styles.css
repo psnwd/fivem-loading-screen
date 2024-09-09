@@ -1,0 +1,238 @@
+@import url("https://fonts.googleapis.com/css?family=Nosifer&display=swap");
+
+:root {
+  --yellow-color: #fcee09;
+  --red-color: #ff003c;
+  --black-color: #050a0e;
+  --blue-color: #00f0ff;
+  --white-color: #fafafa;
+  --neon-pink: #ff007f;
+  --neon-blue: #00f0ff;
+  --dark-bg: #050a0e;
+  --light-bg: #0d0d0d;
+  --accent-color: #fcee09;
+  --red-darker: #40000f;
+
+  /* --halloween-black: #0c0c0c;
+  --halloween-brown: #481e14;
+  --halloween-maroon: #9b3922;
+  --halloween-orange: #f2613f; */
+}
+
+.halloween-family {
+  font-family: Nosifer !important;
+}
+
+.card {
+  width: 190px;
+  height: 300px;
+  background: #07182e;
+  position: relative;
+  display: flex;
+  place-content: center;
+  place-items: center;
+  padding: 6px;
+  overflow: hidden;
+  border-radius: 20px;
+}
+
+.card div {
+  z-index: 1;
+  color: white;
+}
+
+.card::before {
+  content: "";
+  position: absolute;
+  width: 100px;
+  background-image: linear-gradient(
+    180deg,
+    rgb(0, 183, 255),
+    rgb(255, 48, 255)
+  );
+  height: 130%;
+  animation: rotBGimg 3s linear infinite;
+  transition: all 0.2s linear;
+}
+
+@keyframes rotBGimg {
+  from {
+    transform: rotate(0deg);
+  }
+
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+.card::after {
+  content: "";
+  position: absolute;
+  background: #07182e;
+  inset: 5px;
+  border-radius: 15px;
+}
+
+@keyframes spookyGlow {
+  0% {
+    box-shadow: 0 0 5px rgba(255, 165, 0, 0.7);
+  }
+  50% {
+    box-shadow: 0 0 15px rgba(255, 165, 0, 1);
+  }
+  100% {
+    box-shadow: 0 0 5px rgba(255, 165, 0, 0.7);
+  }
+}
+.halloween-frame {
+  border: 5px solid #ff6f61; /* Spooky orange frame */
+  border-radius: 50%;
+  animation: spookyGlow 1.5s infinite;
+  padding: 4px; /* Space between image and frame */
+}
+.halloween-image {
+  border-radius: 50%;
+  width: 4rem; /* 16 */
+  height: 4rem; /* 16 */
+  object-fit: cover;
+}
+
+@keyframes spiderMove {
+  0% {
+    transform: translateY(0);
+  }
+  50% {
+    transform: translateY(-10px);
+  }
+  100% {
+    transform: translateY(0);
+  }
+}
+
+.spider-web {
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: url("assets/images/spider-web.png") no-repeat center center;
+  background-size: cover;
+  opacity: 0.4;
+  z-index: 0;
+}
+
+.spider {
+  position: absolute;
+  width: 24px;
+  height: 24px;
+  background: url("assets/images/spider.png") no-repeat center center;
+  background-size: contain;
+  top: 10%;
+  left: 50%;
+  transform: translateX(-50%);
+  animation: spiderMove 1s infinite;
+  z-index: 1;
+}
+
+.halloween-div {
+  position: relative;
+  background: linear-gradient(to right, #3b0a45, #7d2a6f);
+}
+
+/* Spider Animations CSS */
+@keyframes spiderCreep {
+  0% {
+    transform: translateX(-50%) translateY(0);
+  }
+  50% {
+    transform: translateX(-30%) translateY(10px);
+  }
+  100% {
+    transform: translateX(-50%) translateY(0);
+  }
+}
+
+.spider-creep {
+  position: absolute;
+  width: 24px;
+  height: 24px;
+  background: url("assets/images/spider.png") no-repeat center center;
+  background-size: contain;
+  top: 10%;
+  left: 50%;
+  transform: translateX(-50%);
+  animation: spiderCreep 2s infinite;
+  z-index: 1;
+}
+
+@keyframes spiderSwing {
+  0% {
+    transform: translateX(-50%) rotate(0deg);
+  }
+  50% {
+    transform: translateX(-40%) rotate(-20deg);
+  }
+  100% {
+    transform: translateX(-50%) rotate(0deg);
+  }
+}
+
+.spider-swing {
+  position: absolute;
+  width: 24px;
+  height: 24px;
+  background: url("assets/images/spider.png") no-repeat center center;
+  background-size: contain;
+  top: 10%;
+  left: 50%;
+  transform: translateX(-50%);
+  animation: spiderSwing 2s infinite ease-in-out;
+  z-index: 1;
+}
+
+@keyframes spiderScale {
+  0% {
+    transform: translateX(-50%) scale(1);
+  }
+  50% {
+    transform: translateX(-50%) scale(1.2);
+  }
+  100% {
+    transform: translateX(-50%) scale(1);
+  }
+}
+
+.spider-scale {
+  position: absolute;
+  width: 24px;
+  height: 24px;
+  background: url("assets/images/spider.png") no-repeat center center;
+  background-size: contain;
+  top: 10%;
+  left: 50%;
+  transform: translateX(-50%);
+  animation: spiderScale 1.5s infinite;
+  z-index: 1;
+}
+
+@keyframes spiderSpin {
+  0% {
+    transform: translateX(-50%) rotate(0deg);
+  }
+  100% {
+    transform: translateX(-50%) rotate(360deg);
+  }
+}
+
+.spider-spin {
+  position: absolute;
+  width: 24px;
+  height: 24px;
+  background: url("assets/images/spider.png") no-repeat center center;
+  background-size: contain;
+  top: 10%;
+  left: 50%;
+  transform: translateX(-50%);
+  animation: spiderSpin 2s infinite linear;
+  z-index: 1;
+}
