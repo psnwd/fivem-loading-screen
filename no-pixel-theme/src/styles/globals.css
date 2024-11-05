@@ -1,0 +1,126 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  :root {
+    --radius: 0.5rem;
+  }
+}
+
+@layer base {
+  * {
+    @apply border-border;
+  }
+  body {
+    @apply bg-background text-foreground;
+  }
+}
+
+body {
+}
+
+.button_custom.top {
+  background-image: url(/assets/buttonTop.svg);
+  background-size: 100% 100%;
+  background-repeat: no-repeat;
+  background-position: center;
+}
+
+.button_custom._bottom {
+  background-image: url(/assets/buttonBottom.svg);
+  background-size: 100% 100%;
+  background-repeat: no-repeat;
+  background-position: center;
+}
+
+.button.active,
+.button:hover {
+  filter: drop-shadow(0px 0px calc(0.092592592vh * 3) #00f8b9);
+}
+
+.social_button {
+  width: calc(0.092592592vh * 74);
+  height: calc(0.092592592vh * 73);
+  flex-shrink: 0;
+  background-image: url(/assets/socialBgx.svg);
+  background-size: 100% 100%;
+  background-repeat: no-repeat;
+  background-position: center;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: center;
+  transition: all 0.2s ease-in-out;
+}
+
+.social:hover {
+  filter: drop-shadow(0px 0px calc(0.092592592vh * 3) #00f8b9);
+  cursor: pointer;
+}
+
+.social .title {
+  width: 100%;
+  height: calc(0.092592592vh * 39);
+  flex-shrink: 0;
+  border-radius: calc(0.092592592vh * 4);
+  background: radial-gradient(
+    83.13% 83.13% at 50% 50%,
+    rgba(255, 255, 255, 0.15) 0%,
+    rgba(255, 255, 255, 0) 100%
+  );
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  color: #fff;
+  font-family: Gilroy;
+  font-size: calc(0.092592592vh * 13);
+  font-style: normal;
+  font-weight: 500;
+  line-height: normal;
+}
+
+.social img {
+  width: 70%;
+  height: 100%;
+  -o-object-fit: contain;
+  object-fit: contain;
+  -o-object-position: center;
+  object-position: center;
+}
+
+@keyframes clipPathAnimation {
+  0% {
+    clip-path: inset(100% 0% 0% 0%);
+  }
+  50% {
+    clip-path: inset(0% 0% 0% 0%);
+  }
+  100% {
+    clip-path: inset(100% 0% 0% 0%);
+  }
+}
+
+.animate-clipPath {
+  animation: clipPathAnimation 4s linear infinite;
+}
+
+@keyframes videoFadeIn {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+
+.video-fade-in {
+  animation-name: videoFadeIn;
+  animation-duration: 1s;
+  animation-timing-function: ease-in-out;
+  animation-delay: 0s;
+  animation-iteration-count: 1;
+  animation-direction: normal;
+  animation-fill-mode: none;
+  animation-play-state: running;
+}
